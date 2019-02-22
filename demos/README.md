@@ -4,8 +4,8 @@
 
 To view the operator configuration, use the command `oc get -o yaml configs.imageregistry.operator.openshift.io/instance -n openshift-image-registry`.
 
-```
-you@bastion ~]$ oc get -o yaml configs.imageregistry.operator.openshift.io/instance -n openshift-image-registry
+```console
+[you@bastion ~]$ oc get -o yaml configs.imageregistry.operator.openshift.io/instance -n openshift-image-registry
 apiVersion: imageregistry.operator.openshift.io/v1
 kind: Config
 metadata:
@@ -60,13 +60,13 @@ The image registry operator does not create a route by default.  The registry is
    
    When specified, the operator will create a default route for the registry with the name `default-route-openshift-image-registry.<domain name>`.  To request this route be created, edit the configuration using the below command:
 
-   ```
+   ```shell
    oc patch configs.imageregistry.operator.openshift.io/instance -n openshift-image-registry --type merge --patch '{ "spec": { "defaultRoute": true } }'
    ```
    
    After modifying the operator configuration, the route is created:
    
-   ```
+   ```console
    [you@bastion ~]$ oc get route -n openshift-image-registry
    NAME            HOST/PORT                                                                        PATH   SERVICES         PORT    TERMINATION   WILDCARD
    default-route   default-route-openshift-image-registry.apps.cluster-a407.a407.ocp4.opentlc.com          image-registry   <all>   reencrypt        None
@@ -82,7 +82,7 @@ The image registry operator does not create a route by default.  The registry is
      
      The secret must have three items in it: the certificate, the key, and the CA certificate.
      
-     ```
+     ```yaml
      apiVersion: v1
      kind: Secret
      metadata:
@@ -97,7 +97,7 @@ The image registry operator does not create a route by default.  The registry is
      
    Once the secret has been created, modifying the configuration can be done via patch:
    
-   ```
+   ```shell
    oc patch configs.imageregistry.operator.openshift.io/instance -n openshift-image-registry --type merge --patch '
      {
        "spec": {
@@ -114,7 +114,7 @@ The image registry operator does not create a route by default.  The registry is
 
    Here is the result of the route being created:
    
-   ```
+   ```console
    [you@bastion ~]$ oc get route
    NAME            HOST/PORT                                                                        PATH   SERVICES         PORT    TERMINATION   WILDCARD
    registry        registry.apps.cluster-a407.a407.ocp4.opentlc.com                                        image-registry   <all>   reencrypt     None
@@ -130,10 +130,10 @@ In the Promethus UI, select the "Graph" option at the top, and again in the ensu
 
 From here, we can find the metrics which pertain to the image registry.  All of the metrics are in the Prometheus' namespace `imagemetrics`, so if we begin typing that value into the box, the avaialble metrics will be shown:
 
-![prometheus_available_metrics](iamges/prometheus_2.png)
+![prometheus_available_metrics](images/prometheus_2.png)
 
 Select a metric, in this case we've used `imageregistry_http_request_duration_seconds`, then press the "Execute" button.  The result will be a graph showing the last hour's worth of values for that metric.
 
-![prometheus_graph](iamges/prometheus_2.png)
+![prometheus_graph](images/prometheus_3.png)
 
 **Note:** The image above represents an image registry deployment where the number of replicas is three, hence three lines.

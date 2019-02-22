@@ -175,7 +175,7 @@ There are many reasons why the registry may need to be customized, ranging from 
 
 ### Configure a proxy
 
-```
+```shell
 oc patch configs.imageregistry.operator.openshift.io/instance -n openshift-image-registry --type merge --patch '
     {
       "spec": {
@@ -255,19 +255,6 @@ oc patch configs.imageregistry.operator.openshift.io/instance -n openshift-image
 ```
 
 ### Routes
-
-#### Default route
-
-To create the default route, edit the configuration for the registry operator.  This can be done using the command `oc edit configs.imageregistry.operator.openshift.io/instance -n openshift-image-registry`, or using a patch to edit in one command:
-
-```shell
-oc patch configs.imageregistry.operator.openshift.io/instance \
-    -n openshift-image-registry \
-    --type merge \
-    --patch '{ "spec": { "defaultRoute": "true" } }'
-```
-
-#### Custom routes
 
 See here on the [demo page](../demos/README.md#accessing-the-registry-externally).
 
