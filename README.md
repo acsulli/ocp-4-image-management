@@ -2,10 +2,9 @@
 
 The goal of this module is to cover aspects of container image management and utilization for OCP 4.  This includes, but is not limited to:
 
-* The cluster image registry
-  * [Deploying and configuring](https://gist.github.com/acsulli/c23469c68d4a0988f5d6c3f1c5be6977#modifying-the-registry-configuration)
-  * [Accessing the registry](https://docs.openshift.com/container-platform/4.0/registry/accessing-the-registry.html)
-  * [Registry metrics](https://docs.openshift.com/container-platform/4.0/registry/accessing-the-registry.html#registry-viewing-contents-accessing-the-registry)
+* [Deploying and configuring](https://gist.github.com/acsulli/c23469c68d4a0988f5d6c3f1c5be6977#modifying-the-registry-configuration)
+* [Accessing the registry](https://docs.openshift.com/container-platform/4.0/registry/accessing-the-registry.html)
+* [Registry metrics](https://docs.openshift.com/container-platform/4.0/registry/accessing-the-registry.html#registry-viewing-contents-accessing-the-registry)
 
 Specific tasks to explore these concepts can be found here:
 
