@@ -6,11 +6,6 @@ The goal of this module is to cover aspects of container image management and ut
   * [Deploying and configuring](https://gist.github.com/acsulli/c23469c68d4a0988f5d6c3f1c5be6977#modifying-the-registry-configuration)
   * [Accessing the registry](https://docs.openshift.com/container-platform/4.0/registry/accessing-the-registry.html)
   * [Registry metrics](https://docs.openshift.com/container-platform/4.0/registry/accessing-the-registry.html#registry-viewing-contents-accessing-the-registry)
-* ImageStreams
-  * Streams from [registry.redhat.io](https://registry.redhat.io)
-  * [Authenticating with registry.redhat.io](https://docs.openshift.com/container-platform/4.0/registry/registry-options.html#registry-authentication-enabled-registry-overview-registry-options)
-  * Create a stream
-  * Use a stream
 
 Specific tasks to explore these concepts can be found here:
 
