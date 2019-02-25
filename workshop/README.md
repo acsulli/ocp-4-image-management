@@ -2,18 +2,18 @@
 
 The workshop for the image registry has the following tasks:
 
-* [View the deployment status]()
-  * [Identify errors]()
-* [Customize the deployment]()
-  * [Configure a proxy]()
-  * [Set a replica count]()
-  * [Modify storage settings]()
-  * [Limit API requests]()
-  * [Create and manage routes]()
-* [Use the registry]()
-  * [Authenticating to the Red Hat registry]()
-  * [Configure additional upstream CA certificates]()
-  * [Migrate image references]()
+* [View the deployment status](#deployment-status)
+  * [Identify errors](#identifying-errors)
+* [Customize the deployment](#customizing-the-registry-deployment)
+  * [Configure a proxy](#configure-a-proxy)
+  * [Set a replica count](#replicas)
+  * [Modify storage settings](#storage)
+  * [Limit API requests](#specifying-api-request-limits)
+  * [Create and manage routes](#routes)
+* [Use the registry](#using-the-registry)
+  * [Authenticating to the Red Hat registry](#red-hat-registry-authentication)
+  * [Configure additional upstream CA certificates](#providing-additional-cas-for-upstream-registries)
+  * [Migrate image references](#migrating-embedded-registry-image-references)
 
 ## Deployment status
 
