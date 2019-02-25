@@ -1,5 +1,11 @@
 # OCP 4 Image Mangement - Demos
 
+There are a handful of things which can be demoed to show high-level configuration and functionality:
+
+* [Configuration and common options](#registry-configuration-and-common-options)
+* [Access from outside the OpenShift cluster](#accessing-the-registry-externally)
+* [Metrics](#registry-metrics)
+
 ## Registry configuration and common options
 
 To view the operator configuration, use the command `oc get -o yaml configs.imageregistry.operator.openshift.io/instance -n openshift-image-registry`.

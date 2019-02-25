@@ -1,5 +1,19 @@
 # Image Registry Workshop
 
+The workshop for the image registry has the following tasks:
+
+* [View the deployment status]()
+  * [Identify errors]()
+* [Customize the deployment]()
+  * [Configure a proxy]()
+  * [Set a replica count]()
+  * [Modify storage settings]()
+  * [Limit API requests]()
+  * [Create and manage routes]()
+* [Use the registry]()
+  * [Authenticating to the Red Hat registry]()
+  * [Configure additional upstream CA certificates]()
+  * [Migrate image references]()
 
 ## Deployment status
 
@@ -271,6 +285,7 @@ TODO: this section
 ### Migrating embedded registry image references
 
 ```shell
-oc adm migrate image-references registry.svc.ci.openshift.org/*=docker-registry.default.svc:5000/* --confirm
+# migrate images from registry.company.tld to the internal registry
+oc adm migrate image-references registry.company.tld/*=docker-registry.default.svc:5000/* --confirm
 ```
 
