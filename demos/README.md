@@ -50,7 +50,7 @@ status:
 
 The data in the `spec` section contains configuration information which has been added by the operator or administrator during the course of deployment and/or execution.
 
-The data in the `status` section reflects the current status of the registry.  This includes status condition changes, the number of replicas which exist, the type of storage being used and it's real-time configuration.
+The data in the `status` section reflects the current status of the registry.  This includes status condition changes, the number of replicas which exist, the type of storage being used and its real-time configuration.
 
 Some interesting highlights of the configuration include:
 
@@ -142,4 +142,4 @@ Select a metric, in this case we've used `imageregistry_http_request_duration_se
 
 ![prometheus_graph](images/prometheus_3.png)
 
-**Note:** The image above represents an image registry deployment where the number of replicas is three, hence three lines.
+**Note:** There are three lines in the above image because the values are plotted as quantiles, specifically the 50th, 90th, and 99th.

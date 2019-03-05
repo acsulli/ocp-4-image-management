@@ -30,7 +30,7 @@ oc patch configs.imageregistry.operator.openshift.io/instance -n openshift-image
 The status of the image registry is reported as a part of the `configs.imageregistry.operator.openshift.io/instance` object.  By viewing this object we can see a detailed description of the status and any errors which may be happening.
 
 ```console
-[ansulliv-redhat.com@bastion ~]$ oc get configs.imageregistry.operator.openshift.io/instance  -o yaml -n openshift-image-registry
+[you@bastion ~]$ oc get configs.imageregistry.operator.openshift.io/instance  -o yaml -n openshift-image-registry
 apiVersion: imageregistry.operator.openshift.io/v1
 kind: Config
 [...]
@@ -96,7 +96,7 @@ If the registry is not deployed, there can be a number of reasons.
    
 1. Check the status of the operator deployment
    
-   The CVO will create the deployment for the image registry operator.  Check the status of this deployment and it's pod(s) to ensure that the operator has deployed successfully.
+   The CVO will create the deployment for the image registry operator.  Check the status of this deployment and its pod(s) to ensure that the operator has deployed successfully.
 
    ```console
    [you@bastion ~]$ # check for the deployment status

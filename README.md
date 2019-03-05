@@ -63,7 +63,7 @@ The registry is no longer managed using `oc adm registry` commands, instead it i
     Like other deployoments, a ReplicaSet is created to control and version the configuration of the pods.  Use the command `oc get replicaset -n openshift-image-registry` to view the ReplicaSets which have been created, including seeing which is the currently active set.
     
     ```
-    [ansulliv-redhat.com@bastion ~]$ oc get replicaset -n openshift-image-registry
+    [you@bastion ~]$ oc get replicaset -n openshift-image-registry
     NAME                                         DESIRED   CURRENT   READY   AGE
     cluster-image-registry-operator-6d6b45bfdf   1         1         1       3h33m
     image-registry-78d897f7bc                    0         0         0       163m
